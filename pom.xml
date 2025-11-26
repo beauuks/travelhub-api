@@ -15,7 +15,7 @@
     <groupId>com.travelhub</groupId>
     <artifactId>travelhub-api</artifactId>
     <version>1.0.0</version>
-    <name>TravelHub MVP</name>
+    <name>TravelHub API</name>
 
     <properties>
         <java.version>17</java.version>
@@ -46,6 +46,18 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

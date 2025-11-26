@@ -1,6 +1,8 @@
 package com.travelhub.dto;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Min;
@@ -18,9 +20,11 @@ public class BookingRequest {
     private String customerName;
     
     @NotNull(message = "Check-in date is required")
+    @FutureOrPresent(message = "Check-in date must be today or in the future")
     private LocalDate checkInDate;
     
     @NotNull(message = "Check-out date is required")
+    @Future(message = "Check-out date must be in the future")
     private LocalDate checkOutDate;
     
     @NotNull(message = "Number of guests is required")
